@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../serialTo3270.srcs/sources_1/imports/new/fifo.v" \
+"../../../../serialTo3270.srcs/sources_1/imports/new/receiver.v" \
+"../../../../serialTo3270.srcs/sources_1/new/serialTo3270.v" \
+"../../../../serialTo3270.srcs/sources_1/new/slipRx.v" \
+"../../../../serialTo3270.srcs/sources_1/new/slipTx.v" \
+"../../../../serialTo3270.srcs/sim_1/new/terminal.v" \
+"../../../../serialTo3270.srcs/sources_1/imports/new/transmitter.v" \
+"../../../../serialTo3270.srcs/sources_1/new/uartRx.v" \
+"../../../../serialTo3270.srcs/sources_1/new/uartTx.v" \
+"../../../../serialTo3270.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

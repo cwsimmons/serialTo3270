@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="22548400000fs"></ZoomStartTime>
+      <ZoomEndTime time="41668400001fs"></ZoomEndTime>
+      <Cursor1Time time="40000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="261"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject type="logic" fp_name="/testbench/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uartIn">
+      <obj_property name="ElementShortName">uartIn</obj_property>
+      <obj_property name="ObjectShortName">uartIn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/uartOut">
+      <obj_property name="ElementShortName">uartOut</obj_property>
+      <obj_property name="ObjectShortName">uartOut</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/sclk12">
+      <obj_property name="ElementShortName">sclk12</obj_property>
+      <obj_property name="ObjectShortName">sclk12</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/serialIn">
+      <obj_property name="ElementShortName">serialIn</obj_property>
+      <obj_property name="ObjectShortName">serialIn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/serialOut">
+      <obj_property name="ElementShortName">serialOut</obj_property>
+      <obj_property name="ObjectShortName">serialOut</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/serialOutComplement">
+      <obj_property name="ElementShortName">serialOutComplement</obj_property>
+      <obj_property name="ObjectShortName">serialOutComplement</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/serialOutDelayed">
+      <obj_property name="ElementShortName">serialOutDelayed</obj_property>
+      <obj_property name="ObjectShortName">serialOutDelayed</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/TxActive">
+      <obj_property name="ElementShortName">TxActive</obj_property>
+      <obj_property name="ObjectShortName">TxActive</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/TxWen">
+      <obj_property name="ElementShortName">TxWen</obj_property>
+      <obj_property name="ObjectShortName">TxWen</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/TxWriteData">
+      <obj_property name="ElementShortName">TxWriteData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">TxWriteData[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/TxRen">
+      <obj_property name="ElementShortName">TxRen</obj_property>
+      <obj_property name="ObjectShortName">TxRen</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/TxReadData">
+      <obj_property name="ElementShortName">TxReadData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">TxReadData[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/TxDataAvailable">
+      <obj_property name="ElementShortName">TxDataAvailable</obj_property>
+      <obj_property name="ObjectShortName">TxDataAvailable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/uartResponse">
+      <obj_property name="ElementShortName">uartResponse[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uartResponse[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group171">
+      <obj_property name="label">uut</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/testbench/converter/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/uartIn">
+         <obj_property name="ElementShortName">uartIn</obj_property>
+         <obj_property name="ObjectShortName">uartIn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/uartOut">
+         <obj_property name="ElementShortName">uartOut</obj_property>
+         <obj_property name="ObjectShortName">uartOut</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/sclk12">
+         <obj_property name="ElementShortName">sclk12</obj_property>
+         <obj_property name="ObjectShortName">sclk12</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/serialIn">
+         <obj_property name="ElementShortName">serialIn</obj_property>
+         <obj_property name="ObjectShortName">serialIn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/serialOut">
+         <obj_property name="ElementShortName">serialOut</obj_property>
+         <obj_property name="ObjectShortName">serialOut</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/serialOutComplement">
+         <obj_property name="ElementShortName">serialOutComplement</obj_property>
+         <obj_property name="ObjectShortName">serialOutComplement</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/serialOutDelayed">
+         <obj_property name="ElementShortName">serialOutDelayed</obj_property>
+         <obj_property name="ObjectShortName">serialOutDelayed</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxActive">
+         <obj_property name="ElementShortName">TxActive</obj_property>
+         <obj_property name="ObjectShortName">TxActive</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/sclk">
+         <obj_property name="ElementShortName">sclk</obj_property>
+         <obj_property name="ObjectShortName">sclk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/divider">
+         <obj_property name="ElementShortName">divider[1:0]</obj_property>
+         <obj_property name="ObjectShortName">divider[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxActive">
+         <obj_property name="ElementShortName">RxActive</obj_property>
+         <obj_property name="ObjectShortName">RxActive</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/receiving">
+         <obj_property name="ElementShortName">receiving</obj_property>
+         <obj_property name="ObjectShortName">receiving</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/waiting">
+         <obj_property name="ElementShortName">waiting</obj_property>
+         <obj_property name="ObjectShortName">waiting</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/prevRxActive">
+         <obj_property name="ElementShortName">prevRxActive</obj_property>
+         <obj_property name="ObjectShortName">prevRxActive</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/prevTxActive">
+         <obj_property name="ElementShortName">prevTxActive</obj_property>
+         <obj_property name="ObjectShortName">prevTxActive</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/RxTimeout">
+         <obj_property name="ElementShortName">RxTimeout[9:0]</obj_property>
+         <obj_property name="ObjectShortName">RxTimeout[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxSerialByte">
+         <obj_property name="ElementShortName">TxSerialByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">TxSerialByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxSerialByteAvailable">
+         <obj_property name="ElementShortName">TxSerialByteAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxSerialByteAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxSlipByte">
+         <obj_property name="ElementShortName">TxSlipByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">TxSlipByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxSlipByteAvailable">
+         <obj_property name="ElementShortName">TxSlipByteAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxSlipByteAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxLength">
+         <obj_property name="ElementShortName">TxLength[10:0]</obj_property>
+         <obj_property name="ObjectShortName">TxLength[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxLengthAvailable">
+         <obj_property name="ElementShortName">TxLengthAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxLengthAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxLowerByte">
+         <obj_property name="ElementShortName">TxLowerByte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">TxLowerByte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxLowerByteReceived">
+         <obj_property name="ElementShortName">TxLowerByteReceived</obj_property>
+         <obj_property name="ObjectShortName">TxLowerByteReceived</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxWord">
+         <obj_property name="ElementShortName">TxWord[9:0]</obj_property>
+         <obj_property name="ObjectShortName">TxWord[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxWordAvailable">
+         <obj_property name="ElementShortName">TxWordAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxWordAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxBufferedWord">
+         <obj_property name="ElementShortName">TxBufferedWord[9:0]</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedWord[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxBufferedWordAvailable">
+         <obj_property name="ElementShortName">TxBufferedWordAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedWordAvailable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxBufferedWordAcknowledge">
+         <obj_property name="ElementShortName">TxBufferedWordAcknowledge</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedWordAcknowledge</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxBufferedLength">
+         <obj_property name="ElementShortName">TxBufferedLength[10:0]</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedLength[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxBufferedLengthAvailable">
+         <obj_property name="ElementShortName">TxBufferedLengthAvailable</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedLengthAvailable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxBufferedLengthAcknowledge">
+         <obj_property name="ElementShortName">TxBufferedLengthAcknowledge</obj_property>
+         <obj_property name="ObjectShortName">TxBufferedLengthAcknowledge</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/TxBusy">
+         <obj_property name="ElementShortName">TxBusy</obj_property>
+         <obj_property name="ObjectShortName">TxBusy</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/TxRemaining">
+         <obj_property name="ElementShortName">TxRemaining[10:0]</obj_property>
+         <obj_property name="ObjectShortName">TxRemaining[10:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/prevReceiving">
+         <obj_property name="ElementShortName">prevReceiving</obj_property>
+         <obj_property name="ObjectShortName">prevReceiving</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/RxWord">
+         <obj_property name="ElementShortName">RxWord[11:0]</obj_property>
+         <obj_property name="ObjectShortName">RxWord[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxWordAvailable">
+         <obj_property name="ElementShortName">RxWordAvailable</obj_property>
+         <obj_property name="ObjectShortName">RxWordAvailable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxEnded">
+         <obj_property name="ElementShortName">RxEnded</obj_property>
+         <obj_property name="ObjectShortName">RxEnded</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxBufferedDataAcknowledge">
+         <obj_property name="ElementShortName">RxBufferedDataAcknowledge</obj_property>
+         <obj_property name="ObjectShortName">RxBufferedDataAcknowledge</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/RxBufferedData">
+         <obj_property name="ElementShortName">RxBufferedData[12:0]</obj_property>
+         <obj_property name="ObjectShortName">RxBufferedData[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxBufferedDataAvailable">
+         <obj_property name="ElementShortName">RxBufferedDataAvailable</obj_property>
+         <obj_property name="ObjectShortName">RxBufferedDataAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/RxNarrowerData">
+         <obj_property name="ElementShortName">RxNarrowerData[12:0]</obj_property>
+         <obj_property name="ObjectShortName">RxNarrowerData[12:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxNarrowerAvailable">
+         <obj_property name="ElementShortName">RxNarrowerAvailable</obj_property>
+         <obj_property name="ObjectShortName">RxNarrowerAvailable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxNarrowerHighAcked">
+         <obj_property name="ElementShortName">RxNarrowerHighAcked</obj_property>
+         <obj_property name="ObjectShortName">RxNarrowerHighAcked</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxNarrowerLowAcked">
+         <obj_property name="ElementShortName">RxNarrowerLowAcked</obj_property>
+         <obj_property name="ObjectShortName">RxNarrowerLowAcked</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxNarrowerAcknowledge">
+         <obj_property name="ElementShortName">RxNarrowerAcknowledge</obj_property>
+         <obj_property name="ObjectShortName">RxNarrowerAcknowledge</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxSlipDataOutAcknowledge">
+         <obj_property name="ElementShortName">RxSlipDataOutAcknowledge</obj_property>
+         <obj_property name="ObjectShortName">RxSlipDataOutAcknowledge</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/RxSlipDataOut">
+         <obj_property name="ElementShortName">RxSlipDataOut[7:0]</obj_property>
+         <obj_property name="ObjectShortName">RxSlipDataOut[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/converter/RxSlipDataOutAvailable">
+         <obj_property name="ElementShortName">RxSlipDataOutAvailable</obj_property>
+         <obj_property name="ObjectShortName">RxSlipDataOutAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/CLOCKS_PER_BIT_UART">
+         <obj_property name="ElementShortName">CLOCKS_PER_BIT_UART[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CLOCKS_PER_BIT_UART[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/converter/BUFFER_SIZE_EXP">
+         <obj_property name="ElementShortName">BUFFER_SIZE_EXP[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BUFFER_SIZE_EXP[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group170">
+      <obj_property name="label">mock</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/sclk12">
+         <obj_property name="ElementShortName">sclk12</obj_property>
+         <obj_property name="ObjectShortName">sclk12</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/serialIn">
+         <obj_property name="ElementShortName">serialIn</obj_property>
+         <obj_property name="ObjectShortName">serialIn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/serialOut">
+         <obj_property name="ElementShortName">serialOut</obj_property>
+         <obj_property name="ObjectShortName">serialOut</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/sclk">
+         <obj_property name="ElementShortName">sclk</obj_property>
+         <obj_property name="ObjectShortName">sclk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/MockTerminal/divider">
+         <obj_property name="ElementShortName">divider[1:0]</obj_property>
+         <obj_property name="ObjectShortName">divider[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/txAvailable">
+         <obj_property name="ElementShortName">txAvailable</obj_property>
+         <obj_property name="ObjectShortName">txAvailable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/MockTerminal/txData">
+         <obj_property name="ElementShortName">txData[9:0]</obj_property>
+         <obj_property name="ObjectShortName">txData[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/txAck">
+         <obj_property name="ElementShortName">txAck</obj_property>
+         <obj_property name="ObjectShortName">txAck</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/testbench/MockTerminal/rxData">
+         <obj_property name="ElementShortName">rxData[11:0]</obj_property>
+         <obj_property name="ObjectShortName">rxData[11:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/rxAvailable">
+         <obj_property name="ElementShortName">rxAvailable</obj_property>
+         <obj_property name="ObjectShortName">rxAvailable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/rxActive">
+         <obj_property name="ElementShortName">rxActive</obj_property>
+         <obj_property name="ObjectShortName">rxActive</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/testbench/MockTerminal/txActive">
+         <obj_property name="ElementShortName">txActive</obj_property>
+         <obj_property name="ObjectShortName">txActive</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
