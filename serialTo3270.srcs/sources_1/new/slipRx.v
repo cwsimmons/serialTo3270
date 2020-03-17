@@ -61,6 +61,7 @@ module slipRx (
                 begin
                     lengthOut <= currentLength;
                     lengthOutAvailable <= 1;
+                    currentLength <= 0;
                 end
                 else if (dataIn == `FRAME_ESC)
                 begin

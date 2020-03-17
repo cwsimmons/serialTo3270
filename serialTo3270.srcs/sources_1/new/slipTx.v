@@ -28,14 +28,12 @@ module slipTx (
 
     always @(posedge clk)
     begin
-
-        escaped <= 0;
         dataInAck <= 0;
-
         if (reset || dataOutAcknowledge)
         begin
             dataOutAvailable <= 0;
             dataOut <= 0;
+            escaped <= 0;
         end
         else if (!dataOutAvailable && dataInAvailable)
         begin

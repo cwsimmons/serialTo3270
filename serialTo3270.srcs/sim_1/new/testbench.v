@@ -112,6 +112,9 @@ module testbench();
         #10 writeToUart(8'hD2);
         #10 writeToUart(8'h02);
         #10 writeToUart(8'hC0);
+        #10 writeToUart(8'h90);
+        #10 writeToUart(8'h01);
+        #10 writeToUart(8'hC0);
 
         #25000;
     end
