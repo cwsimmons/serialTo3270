@@ -29,11 +29,16 @@ module slipTx (
     always @(posedge clk)
     begin
         dataInAck <= 0;
-        if (reset || dataOutAcknowledge)
+        if (reset)
         begin
             dataOutAvailable <= 0;
             dataOut <= 0;
             escaped <= 0;
+        end
+        else if (dataOutAcknowledge)
+        begin
+            dataOutAvailable <= 0;
+            dataOut <= 0;
         end
         else if (!dataOutAvailable && dataInAvailable)
         begin
@@ -71,7 +76,7 @@ module slipTx (
                 end
                 else
                 begin
-                    
+                    escaped <= 0;
                     dataInAck <= 1;
 
                     if (dataIn == `FRAME_END)
