@@ -21,7 +21,7 @@ module testbench();
 
     /*  UUT  */
 
-    serialTo3270 #(6, 11) converter(
+    serialTo3270 #(6, 1, 0, 2, 11) converter(
         .clk                    (clk),
         .reset                  (reset),
         .uartIn                 (uartIn),
@@ -65,7 +65,7 @@ module testbench();
         .occupancy              ()
     );
 
-    uartTransmitter #(6) TxUart(
+    uartTransmitter #(6, 1, 0, 2) TxUart(
         .clk                    (clk),
         .reset                  (reset),
         .dataAvailable          (TxDataAvailable),

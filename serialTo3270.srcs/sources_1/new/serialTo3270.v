@@ -23,6 +23,11 @@ module serialTo3270(
 );
 
     parameter CLOCKS_PER_BIT_UART = 868;
+    parameter PARITY_ENABLED = 0;
+    parameter PARITY_IS_ODD = 0;
+    parameter STOP_BITS = 1;
+    
+    
     parameter BUFFER_SIZE_EXP = 11;
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*
@@ -112,7 +117,7 @@ module serialTo3270(
     wire [BUFFER_SIZE_EXP-1:0] TxLength;
     wire TxLengthAvailable;
 
-    uartReceiver #(CLOCKS_PER_BIT_UART) RxUart(
+    uartReceiver #(CLOCKS_PER_BIT_UART, PARITY_ENABLED, PARITY_IS_ODD, STOP_BITS) RxUart(
         .clk                    (clk),
         .reset                  (reset),
         .serialIn               (uartIn),

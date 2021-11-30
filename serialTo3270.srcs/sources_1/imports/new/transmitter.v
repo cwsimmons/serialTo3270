@@ -3,17 +3,20 @@
 /*
  * IBM 3270 Coax Transmitter (Type A)
  * 
- * Author: Chris Simmons
- * Date:   12/15/2019
+ * Copyright 2020, Christopher Simmons
+ * Date:   9/19/2020
  */
 
 module transmitter (
     input clk,
     input reset,
     input sclk,             // 2 x 2.358 MHz
+    
+    input enable,
 
     input dataAvailable,
-    input [9:0] data,
+    input last,
+    input [15:0] data,
     output reg ren,
 
     output serialOut,
@@ -22,12 +25,14 @@ module transmitter (
     output reg active
 );
     
+    parameter spacing = 0;
+    
     parameter [16:0] header = 17'b11100010101010101;
     parameter [5:0] trailer = 6'b111101;
     
     reg [9:0] delayReg;
     
-    reg [1:0] txState;
+    reg [2:0] txState;
     reg [4:0] bitCount;
     
 
@@ -35,20 +40,22 @@ module transmitter (
     reg pendingAck;
     reg pendingAckPrev;
     reg [9:0] pendingWord;
+    reg pendingLast;
 
     reg [9:0] currentWord;
+    reg currentLast;
     wire [11:0] packedWord;
     wire parityBit;
     
     assign parityBit = ^{1'b1, currentWord};
     assign packedWord = {1'b1, currentWord, parityBit};
     
-    assign serialOut = (txState == 0) ? 1'b1:
+    assign serialOut = (txState == 0) ? 1'b0:
                        (txState == 1) ? header[bitCount] :
                        (txState == 2) ? packedWord[11 - bitCount[4:1]] ~^ bitCount[0] :
                        (txState == 3) ? trailer[bitCount] : 1'b0;
 
-    assign serialOutComplement = (txState) ? !serialOut : 0;
+    assign serialOutComplement = (txState[1:0]) ? !serialOut : 1'b0;
                        
     assign serialOutDelayed = delayReg[9];
     
@@ -67,11 +74,12 @@ module transmitter (
         ren <= 0;
         if (reset)
             pending <= 0;
-        if (dataAvailable && !pending)
+        if (dataAvailable && !pending && enable)
         begin
             ren <= 1;
             pending <= 1;
-            pendingWord <= data;
+            pendingWord <= data[9:0];
+            pendingLast <= last;
         end
         else if (pendingAck && !pendingAckPrev)
         begin
@@ -95,8 +103,8 @@ module transmitter (
         begin
 
             txState <= 0;
-              bitCount <= 0;
-              currentWord <= 0;
+            bitCount <= 0;
+            currentWord <= 0;
 
         end
         else if (txState == 0)
@@ -108,6 +116,7 @@ module transmitter (
                 bitCount <= 0;
                 pendingAck <= 1;
                 currentWord <= pendingWord;
+                currentLast <= pendingLast;
             end
             
         end
@@ -132,10 +141,11 @@ module transmitter (
             begin
                 bitCount <= 0;
                 
-                if (pending)
+                if (pending && !currentLast)
                 begin
                     pendingAck <= 1;
                     currentWord <= pendingWord;
+                    currentLast <= pendingLast;
                 end
                 else
                 begin
@@ -152,6 +162,20 @@ module transmitter (
         begin
         
             if (bitCount == 5)
+            begin
+                txState <= 4;
+                bitCount <= 0;
+            end
+            else
+            begin
+                bitCount <= bitCount + 1;
+            end
+        
+        end
+        else if (txState == 4)
+        begin
+        
+            if (bitCount == spacing)
             begin
                 txState <= 0;
                 bitCount <= 0;
